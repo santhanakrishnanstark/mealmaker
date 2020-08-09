@@ -1,0 +1,266 @@
+@font-face {
+  font-family: 'Overpass SemiBold';
+  src: url('../fonts/Overpass-SemiBold.eot');
+  src: url('../fonts/Overpass-SemiBold.eot?#iefix') format('embedded-opentype'), url('../fonts/Overpass-SemiBold.woff2') format('woff2'), url('../fonts/Overpass-SemiBold.woff') format('woff'), url('../fonts/Overpass-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Overpass Thin';
+  src: url('../fonts/Overpass-Thin.eot');
+  src: url('../fonts/Overpass-Thin.eot?#iefix') format('embedded-opentype'), url('../fonts/Overpass-Thin.woff2') format('woff2'), url('../fonts/Overpass-Thin.woff') format('woff'), url('../fonts/Overpass-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Overpass Bold';
+  src: url('../fonts/Overpass-Bold.eot');
+  src: url('../fonts/Overpass-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Overpass-Bold.woff2') format('woff2'), url('../fonts/Overpass-Bold.woff') format('woff'), url('../fonts/Overpass-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Overpass Regular';
+  src: url('../fonts/Overpass-Regular.eot');
+  src: url('../fonts/Overpass-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Overpass-Regular.woff2') format('woff2'), url('../fonts/Overpass-Regular.woff') format('woff'), url('../fonts/Overpass-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Overpass Regular';
+  scroll-behavior: smooth;
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+header {
+  border: 1px solid #eee;
+  position: fixed;
+  top: 0px;
+  background: #fff;
+  z-index: 1;
+  width: 100%;
+}
+.header .brand {
+  display: flex;
+  align-items: center;
+}
+.header .brand img {
+  width: 100px;
+  height: 60px;
+  margin-bottom: 15px;
+  max-width: 100%;
+}
+.header .menu ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0px;
+}
+.header .menu ul li {
+  margin: 0px 15px;
+}
+.header .menu ul li a {
+  color: #000;
+  text-decoration: none;
+}
+.header .menu ul li a.active {
+  color: #00A521;
+}
+section#intro {
+  padding: 35px 0px;
+  margin-top: 85px;
+}
+section#intro .welcome-info {
+  width: 535px;
+}
+section#intro .welcome-info p {
+  font-size: 4rem;
+  margin-bottom: 15px;
+}
+section#intro .welcome-info .searchForm {
+  position: relative;
+}
+section#intro .welcome-info .searchForm .searchTxt {
+  padding: 15px;
+  padding-right: 40px;
+  font-size: 18px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  box-shadow: 0px 1px 4px #e6e6e6;
+  width: 100%;
+}
+section#intro .welcome-info .searchForm .searchBtn {
+  background: none;
+  border: 0px;
+  position: absolute;
+  right: 1%;
+  top: 50%;
+  transform: translate(0, -50%);
+  cursor: pointer;
+}
+section#intro .welcome-info .searchForm .searchBtn .icon {
+  color: #aaa;
+}
+section#search-result {
+  min-height: calc(96vh - 90px);
+}
+section#search-result .meals-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+section#meal-modal {
+  display: none;
+  padding-top: 35px;
+  margin-bottom: 5rem;
+}
+section#meal-modal.show {
+  position: fixed;
+  top: 85px;
+  left: 0px;
+  height: 100vh;
+  width: 100%;
+  background: #fff;
+  display: block;
+  overflow: auto;
+  padding-bottom: 5rem;
+}
+section#meal-modal .container.intro-layout {
+  display: flex;
+  position: relative;
+  height: 400px;
+}
+section#meal-modal .closeBtn {
+  position: absolute;
+  top: -10px;
+  right: -50px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+section#meal-modal .closeBtn .icon {
+  font-size: 2rem;
+}
+section#meal-modal .meal-intro {
+  flex: 1;
+}
+section#meal-modal .meal-ingredient-container {
+  flex: 2;
+  margin: 0px 25px;
+  overflow-y: scroll;
+  margin-top: 30px;
+}
+section#meal-modal .meal-ingredient-container .card {
+  display: inline-block;
+  width: 145px;
+}
+section#meal-modal .meal-ingredient-container .card p {
+  font-size: 14px;
+  text-align: center;
+}
+section#meal-modal .meal-ingredient-container .card img {
+  width: 150px;
+}
+section#meal-modal .meal-ingredient-container h3 {
+  position: absolute;
+  margin: 0px;
+  top: 0px;
+}
+section#meal-modal .meal-procedure-container {
+  margin: 5rem auto;
+  text-align: center;
+  width: 80%;
+}
+section#meal-modal .meal-procedure-container h3 {
+  display: inline-block;
+}
+section#meal-modal .meal-procedure-container h3::after,
+section#meal-modal .meal-procedure-container h3::before {
+  content: "";
+  background: #000;
+  display: inline-block;
+  width: 25vw;
+  height: 2px;
+  vertical-align: middle;
+  margin: 0px 10px;
+}
+section#meal-modal .card {
+  box-shadow: 5px 8px 10px 0px #eee;
+  width: auto;
+}
+section#meal-modal .card:hover {
+  border: none;
+  transform: initial;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 21.33%;
+  justify-content: center;
+  padding: 15px;
+  margin: 0px 15px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.card img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+.card p {
+  font-size: 22px;
+  margin-bottom: 0px;
+}
+.card img,
+.card p {
+  pointer-events: none;
+}
+.card:hover {
+  border: 1px solid #eee;
+  box-shadow: 0px 1px 4px #eee;
+  transform: scale(1.1);
+}
+.center-seperate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.icon {
+  pointer-events: none;
+}
+.hide {
+  display: none;
+}
+.background-overlay {
+  position: fixed;
+  bottom: -22%;
+  pointer-events: none;
+}
+.loading {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 5;
+  opacity: 0.7;
+}
+.loading img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: transparent;
+  border-radius: 50%;
+  width: 50px;
+}

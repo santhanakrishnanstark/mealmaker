@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Overpass';
+    src: url('Overpass-SemiBold.eot');
+    src: url('Overpass-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('Overpass-SemiBold.woff2') format('woff2'),
+        url('Overpass-SemiBold.woff') format('woff'),
+        url('Overpass-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Overpass';
+    src: url('Overpass-Thin.eot');
+    src: url('Overpass-Thin.eot?#iefix') format('embedded-opentype'),
+        url('Overpass-Thin.woff2') format('woff2'),
+        url('Overpass-Thin.woff') format('woff'),
+        url('Overpass-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Overpass';
+    src: url('Overpass-Bold.eot');
+    src: url('Overpass-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Overpass-Bold.woff2') format('woff2'),
+        url('Overpass-Bold.woff') format('woff'),
+        url('Overpass-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Overpass';
+    src: url('Overpass-Regular.eot');
+    src: url('Overpass-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Overpass-Regular.woff2') format('woff2'),
+        url('Overpass-Regular.woff') format('woff'),
+        url('Overpass-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

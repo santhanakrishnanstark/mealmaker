@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meal Maker</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="container header center-seperate">
+        <div class="brand">
+          <img src="img/bowl.svg" alt="logo" />
+          <h1>Meal Maker</h1>
+        </div>
+        <nav class="menu">
+          <ul>
+            <li><a href="/" class="active">Home</a></li>
+            <li><a href="/about">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="intro" class="container center-seperate">
+        <div class="welcome-info">
+          <p>Try find a meal you would like to cook...</p>
+          <form id="search-form" class="searchForm" onsubmit="getFormData()">
+            <input
+              type="text"
+              class="searchTxt"
+              name="search"
+              id="search"
+              placeholder="search meal"
+            />
+            <button id="search-btn" class="searchBtn">
+              <span class="material-icons icon">
+                search
+              </span>
+            </button>
+          </form>
+        </div>
+        <div class="welcome-img">
+          <img src="img/barbecue.svg" alt="image of cooking" />
+        </div>
+      </section>
+      <section id="search-result" class="container hide">
+        <h2>Search Result: <span id="searchfoodtxt"></span></h2>
+        <div id="meals-container" class="meals-container"></div>
+      </section>
+      <section id="meal-modal" class="meal-modal">
+        <div class="container intro-layout">
+          <button id="meal-modal-close" class="closeBtn">
+            <span class="material-icons icon">
+              close
+            </span>
+          </button>
+          <div class="meal-intro"></div>
+          <div class="meal-ingredient-container">
+            <h3>Ingredient</h3>
+          </div>
+        </div>
+        <div class="container">
+          <div class="meal-procedure-container">
+            <h3>How to Prepare ?</h3>
+            <div class="instructions"></div>
+            <h4><u>Bored of Reading ! Check this out...</u></h4>
+            <div id="mealVideo"></div>
+          </div>
+        </div>
+      </section>
+      <div class="background-overlay">
+        <img src="img/curve-bg.svg" alt="background image" />
+      </div>
+    </main>
+    <div class="loading hide">
+      <img src="img/Ripple-loading.svg" alt="loading..." />
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
