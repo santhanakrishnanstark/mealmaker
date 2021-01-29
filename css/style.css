@@ -1,31 +1,43 @@
 @font-face {
-  font-family: 'Overpass SemiBold';
-  src: url('../fonts/Overpass-SemiBold.eot');
-  src: url('../fonts/Overpass-SemiBold.eot?#iefix') format('embedded-opentype'), url('../fonts/Overpass-SemiBold.woff2') format('woff2'), url('../fonts/Overpass-SemiBold.woff') format('woff'), url('../fonts/Overpass-SemiBold.ttf') format('truetype');
+  font-family: "Overpass SemiBold";
+  src: url("../fonts/Overpass-SemiBold.eot");
+  src: url("../fonts/Overpass-SemiBold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Overpass-SemiBold.woff2") format("woff2"),
+    url("../fonts/Overpass-SemiBold.woff") format("woff"),
+    url("../fonts/Overpass-SemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Overpass Thin';
-  src: url('../fonts/Overpass-Thin.eot');
-  src: url('../fonts/Overpass-Thin.eot?#iefix') format('embedded-opentype'), url('../fonts/Overpass-Thin.woff2') format('woff2'), url('../fonts/Overpass-Thin.woff') format('woff'), url('../fonts/Overpass-Thin.ttf') format('truetype');
+  font-family: "Overpass Thin";
+  src: url("../fonts/Overpass-Thin.eot");
+  src: url("../fonts/Overpass-Thin.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Overpass-Thin.woff2") format("woff2"),
+    url("../fonts/Overpass-Thin.woff") format("woff"),
+    url("../fonts/Overpass-Thin.ttf") format("truetype");
   font-weight: 100;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Overpass Bold';
-  src: url('../fonts/Overpass-Bold.eot');
-  src: url('../fonts/Overpass-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Overpass-Bold.woff2') format('woff2'), url('../fonts/Overpass-Bold.woff') format('woff'), url('../fonts/Overpass-Bold.ttf') format('truetype');
+  font-family: "Overpass Bold";
+  src: url("../fonts/Overpass-Bold.eot");
+  src: url("../fonts/Overpass-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Overpass-Bold.woff2") format("woff2"),
+    url("../fonts/Overpass-Bold.woff") format("woff"),
+    url("../fonts/Overpass-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Overpass Regular';
-  src: url('../fonts/Overpass-Regular.eot');
-  src: url('../fonts/Overpass-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Overpass-Regular.woff2') format('woff2'), url('../fonts/Overpass-Regular.woff') format('woff'), url('../fonts/Overpass-Regular.ttf') format('truetype');
+  font-family: "Overpass Regular";
+  src: url("../fonts/Overpass-Regular.eot");
+  src: url("../fonts/Overpass-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Overpass-Regular.woff2") format("woff2"),
+    url("../fonts/Overpass-Regular.woff") format("woff"),
+    url("../fonts/Overpass-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -36,7 +48,7 @@
 body {
   margin: 0px;
   padding: 0px;
-  font-family: 'Overpass Regular';
+  font-family: "Overpass Regular";
   scroll-behavior: smooth;
 }
 .container {
@@ -74,7 +86,7 @@ header {
   text-decoration: none;
 }
 .header .menu ul li a.active {
-  color: #00A521;
+  color: #00a521;
 }
 section#intro {
   padding: 35px 0px;
@@ -188,10 +200,13 @@ section#meal-modal .meal-procedure-container h3::before {
   content: "";
   background: #000;
   display: inline-block;
-  width: 25vw;
+  width: 18vw;
   height: 2px;
   vertical-align: middle;
   margin: 0px 10px;
+}
+section#meal-modal .meal-procedure-container ul li {
+  text-align: left;
 }
 section#meal-modal .card {
   box-shadow: 5px 8px 10px 0px #eee;

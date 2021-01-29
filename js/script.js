@@ -157,11 +157,14 @@ function updateIngredientListUI(list) {
 
   // create iframe video
   var vidsrc = fullMealData.meals[0].strYoutube;
+  vidsrc = new URL(vidsrc);
+  var generatedUrl = vidsrc.origin+'/embed/'+vidsrc.searchParams.get('v');
   var iframe = document.createElement("iframe");
   iframe.setAttribute("width", "560");
   iframe.setAttribute("height", "315");
-  iframe.setAttribute("src", vidsrc);
-  iframe.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture");
+  iframe.setAttribute("src", generatedUrl);
+  iframe.setAttribute("allowfullscreen", "");
+  iframe.setAttribute("type", "text/html");
   mealVideo.appendChild(iframe);
 
   loading.classList.toggle("hide");
