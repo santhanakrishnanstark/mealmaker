@@ -128,6 +128,7 @@ section#search-result {
 }
 section#search-result .meals-container {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 section#meal-modal {
@@ -278,4 +279,92 @@ section#meal-modal .card:hover {
   background: transparent;
   border-radius: 50%;
   width: 50px;
+}
+
+/* ipad */
+@media (min-width: 768px) and (max-width: 1024px) {
+  section#intro {
+    height: 80vh;
+    margin: 0px;
+    padding: 0px 15px;
+  }
+  section#intro .welcome-info p {
+    font-size: 2rem;
+  }
+  section#search-result {
+    padding: 0px 15px;
+  }
+  .card {
+    margin-left: 0px;
+  }
+  section#meal-modal {
+    padding-left: 15px;
+  }
+  section#meal-modal .meal-ingredient-container .card {
+    width: 140px;
+  }
+  section#meal-modal .closeBtn {
+    right: 5px;
+    top: -25px;
+  }
+}
+
+/* mobile */
+@media (max-width: 767px) {
+  .header .brand h1 {
+    font-size: 1.2rem;
+  }
+  section#intro {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 90vh;
+  }
+  section#intro .welcome-info {
+    width: auto;
+  }
+  section#intro .welcome-info p {
+    font-size: 1rem;
+  }
+  section#intro .welcome-img img {
+    max-width: 100%;
+  }
+  .card {
+    width: 50%;
+    margin: 0px;
+  }
+  .card p {
+    font-size: 16px;
+  }
+  section#meal-modal.show {
+    top: 75px;
+    padding-bottom: 150px;
+  }
+  section#meal-modal .meal-ingredient-container h3 {
+    top: -20px;
+  }
+  section#meal-modal .meal-ingredient-container .card {
+    width: 100px;
+    margin: 0px 3px;
+  }
+  section#meal-modal .meal-procedure-container {
+    margin: 0px;
+    width: 100%;
+  }
+  section#meal-modal .meal-procedure-container ul li {
+    line-height: 1.5;
+    margin-bottom: 10px;
+    padding-right: 10px;
+  }
+  section#meal-modal .meal-ingredient-container {
+    margin: 0px 15px;
+  }
+  section#meal-modal .closeBtn {
+    top: -30px;
+    right: 0px;
+  }
+  #mealVideo iframe {
+    width: 80%;
+    height: auto;
+  }
 }
